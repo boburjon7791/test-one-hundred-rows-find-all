@@ -4,7 +4,6 @@ import com.example.test_one_hundred_rows_find_all.models.entities.Transaction;
 import jakarta.persistence.EntityGraph;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
-import jakarta.persistence.metamodel.Attribute;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
