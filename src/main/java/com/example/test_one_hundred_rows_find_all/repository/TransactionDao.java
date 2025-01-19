@@ -25,7 +25,7 @@ public class TransactionDao {
         entityGraph.addAttributeNodes("fromCard");
         entityGraph.addAttributeNodes("toCard");
         return entityManager.createQuery("from Transaction", Transaction.class)
-                .setHint("jakarta.persistence.loadgraph", entityGraph)
+                .setHint("jakarta.persistence.loadgraph", entityGraph)  // agar java ee ishlatayotgan bo'lsanginz jakarta ning o'rniga javax deb yozish kerak
                 .getResultList();
     }
 }
