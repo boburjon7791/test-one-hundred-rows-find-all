@@ -19,6 +19,7 @@ public class TransactionDao {
     }
 
     public List<Transaction> findAll() {
+        // addAttributeNodes metodiga Transaction entity dagi relation bo'lib bog'langan entity field lar nomlarini yozishimiz kerak
         EntityGraph<Transaction> entityGraph = entityManager.createEntityGraph(Transaction.class);
         entityGraph.addAttributeNodes("fromUser");
         entityGraph.addAttributeNodes("toUser");

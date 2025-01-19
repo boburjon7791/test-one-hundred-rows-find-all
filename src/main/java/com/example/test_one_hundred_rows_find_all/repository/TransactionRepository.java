@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import java.util.List;
 
 public interface TransactionRepository extends JpaRepository<Transaction, Long>, JpaSpecificationExecutor<Transaction> {
+  // attributePaths dagi qiymatlar Transaction entity dagi relation bo'lib bog'langan entity field lar nomi bilan bir xil bo'lishi kerak
   @Override
   @EntityGraph(attributePaths = {"fromUser", "toUser", "fromCard", "toCard"})
   List<Transaction> findAll();
